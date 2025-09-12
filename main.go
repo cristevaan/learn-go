@@ -54,4 +54,29 @@ func main()  {
 	fmt.Printf("value8 is of type %T\n", value8)
 	fmt.Printf("value9 is of type %T\n", value9)
 
+	// array
+	var scores [3]int = [3]int{90, 80, 70}
+	fmt.Println(scores)
+	fmt.Println(scores[0])
+	scores[0] = 100
+	fmt.Println(scores[0])
+	fmt.Println(scores)
+	fmt.Println(len(scores))
+
+	names := [...]string{"Madilog", "Budi", "Joko"}
+	for i := 0; i < len(names); i++ {
+		fmt.Printf("Index %d: %s\n", i, names[i])
+	}
+
+	for i, name := range names {
+		fmt.Printf("Index %d: %s\n", i, name)
+	}
+
+	for _, name := range names {
+		fmt.Printf("Name: %s\n", name)
+	}
+
+	arrx := [5]int{1: 10, 3: 30}
+	fmt.Println(arrx)
+
 }
