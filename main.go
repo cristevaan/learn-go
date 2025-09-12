@@ -190,4 +190,29 @@ func main()  {
 		fmt.Println("c lebih besar dari 15 dan tidak sama dengan 20")
 	}
 
+	// for loop
+	for i := 0; i < 5; i++ {
+		fmt.Println("Perulangan ke-", i)
+	}
+
+	j := 5
+	for j < 9 {
+		fmt.Println("Perulangan ke-", j)
+		j++
+	}
+
+	food := []string{"Nasi Goreng", "Mie Goreng", "Sate"}
+	for index, food := range food {
+		fmt.Printf("Makanan %d: %s\n", index, food)
+	}
+
+	for k := 0; k < 6; k++ {
+		if k == 1 {
+			continue
+		}
+		if k == 5 {
+			break
+		}
+		fmt.Println("Perulangan ke-", k)
+	}
 }
