@@ -142,4 +142,16 @@ func main()  {
 	a--
 	fmt.Println(a)
 
+	// comparison & logical operation
+	fmt.Println(a == 10)
+	fmt.Println(a != 10)
+	fmt.Println(a > 10)
+	fmt.Println(a >= 10)
+	fmt.Println(a < 10)
+	fmt.Println(a <= 10)
+
+	fmt.Println(a > 5 && a < 15)
+	fmt.Println(a > 5 || a < 5)
+	fmt.Println(!(a > 5 && a < 15))
+
 }
