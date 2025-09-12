@@ -6,6 +6,35 @@ import (
 	"strings"
 )
 
+func test() {
+	fmt.Println("Test function")
+}
+
+func sayHello(name string) string {
+	return "Hello " + name
+}
+
+func oddEven(number int) (string, int) {
+	if number % 2 == 0 {
+		return "Even", number
+	} else {
+		return "Odd", number
+	}
+}
+
+func averageTwoNumber(a, b int) (result float64) {
+	result = float64(a + b) / 2
+	return
+}
+
+func addNumbers(numbers ...int) int {
+	total := 0
+	for _, number := range numbers {
+		total += number
+	}
+	return total
+}
+
 func main()  {
 	fmt.Println("Hello World!")
 
@@ -215,4 +244,18 @@ func main()  {
 		}
 		fmt.Println("Perulangan ke-", k)
 	}
+
+	// function
+	test()
+
+	fmt.Println(sayHello("Madilog"))
+
+	hasil, number := oddEven(10)
+	fmt.Printf("%d adalah bilangan %s\n", number, hasil)
+
+	avg := averageTwoNumber(10, 20)
+	fmt.Printf("Rata-rata: %.2f\n", avg)
+
+	total := addNumbers(10, 20, 30, 40, 50)
+	fmt.Printf("Total: %d\n", total)
 }
