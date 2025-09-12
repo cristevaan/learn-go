@@ -106,4 +106,22 @@ func main()  {
 	fmt.Printf("length = %d\n", len(myslice2))
 	fmt.Printf("capacity = %d\n", cap(myslice2))
 
+	// map
+	person := map[string]string{
+		"name":    "Madilog",
+		"address": "Indonesia",
+	}
+	fmt.Println(person)
+	fmt.Println(person["name"])
+	person["title"] = "Programmer"
+	fmt.Println(person)
+	delete(person, "address")
+	fmt.Println(person)
+	fmt.Println(len(person))
+
+	var book = make(map[string]string)
+	book["title"] = "Belajar Go"
+	book["author"] = "Madilog"
+	fmt.Println(book)
+
 }
