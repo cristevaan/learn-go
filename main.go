@@ -79,4 +79,31 @@ func main()  {
 	arrx := [5]int{1: 10, 3: 30}
 	fmt.Println(arrx)
 
+	// slice
+	var fruits = []string{"Apple", "Banana", "Cherry"}
+	fmt.Println(fruits)
+	fmt.Println(len(fruits))
+	fmt.Println(cap(fruits))
+	fruits = append(fruits, "Durian")
+	fmt.Println(fruits)
+	fmt.Println(len(fruits))
+	fmt.Println(cap(fruits))
+
+	myarr := [5]int{10, 20, 30, 40, 50}
+	myslice := myarr[1:4]
+	fmt.Println(myslice)
+	fmt.Println(len(myslice))
+	fmt.Println(cap(myslice))
+
+	myslice1 := make([]int, 5, 10)
+	fmt.Printf("myslice1 = %v\n", myslice1)
+	fmt.Printf("length = %d\n", len(myslice1))
+	fmt.Printf("capacity = %d\n", cap(myslice1))
+
+	myslice2 := make([]int, 3)
+	copy(myslice2, myarr[1:4])
+	fmt.Printf("myslice2 = %v\n", myslice2)
+	fmt.Printf("length = %d\n", len(myslice2))
+	fmt.Printf("capacity = %d\n", cap(myslice2))
+
 }
