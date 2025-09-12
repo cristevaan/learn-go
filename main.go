@@ -124,4 +124,22 @@ func main()  {
 	book["author"] = "Madilog"
 	fmt.Println(book)
 
+	// math operation
+	a := 10
+	fmt.Println(a + 5 - 2 * 3 / 2 % 2)
+	a += 5
+	fmt.Println(a)
+	a -= 2
+	fmt.Println(a)
+	a *= 3
+	fmt.Println(a)
+	a /= 2
+	fmt.Println(a)
+	a %= 2
+	fmt.Println(a)
+	a++
+	fmt.Println(a)
+	a--
+	fmt.Println(a)
+
 }
