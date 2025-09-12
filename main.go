@@ -169,4 +169,25 @@ func main()  {
 		fmt.Println("b tidak lebih besar dari 15")
 	}
 
+	// switch case
+	switch a {
+	case 8:
+		fmt.Println("a adalah 8")
+	case 9:
+		fmt.Println("a adalah 9")
+	case 10:
+		fmt.Println("a adalah 10")
+	default:
+		fmt.Println("a bukan 8, 9, atau 10")
+	}
+
+	switch c := a * 2; {
+	case c < 15:
+		fmt.Println("c lebih kecil dari 15")
+	case c == 20:
+		fmt.Println("c sama dengan 20")
+	default:
+		fmt.Println("c lebih besar dari 15 dan tidak sama dengan 20")
+	}
+
 }
