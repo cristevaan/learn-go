@@ -154,4 +154,19 @@ func main()  {
 	fmt.Println(a > 5 || a < 5)
 	fmt.Println(!(a > 5 && a < 15))
 
+	// if statement
+	if a > 10 {
+		fmt.Println("a lebih besar dari 10")
+	} else if a == 10 {
+		fmt.Println("a sama dengan 10")
+	} else {
+		fmt.Println("a lebih kecil dari 10")
+	}
+
+	if b := a * 2; b > 15 {
+		fmt.Println("b lebih besar dari 15")
+	} else {
+		fmt.Println("b tidak lebih besar dari 15")
+	}
+
 }
