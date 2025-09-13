@@ -52,6 +52,20 @@ func addNumbers(numbers ...int) int {
 	return total
 }
 
+type Parent struct {
+	Name string
+}
+
+type Child struct {
+	Parent
+	Name string
+	Age int
+}
+
+func (c Child) title() string {
+	return c.Name + " son of " + c.Parent.Name
+}
+
 func main()  {
 	fmt.Println("Hello World!")
 
@@ -281,4 +295,19 @@ func main()  {
 	fmt.Println("Program selesai")
 	configCheck("")
 	fmt.Println("Program selesai")
+
+	// struct
+	var parent1 Parent
+	parent1.Name = "Odin"
+	fmt.Println("Parent Name:", parent1.Name)
+
+	child1 := Child{
+		Parent: Parent{Name: "Odin"},
+		Name: "Thor",
+		Age: 10,
+	}
+	fmt.Println("Child Name:", child1.Name)
+	fmt.Println("Child Age:", child1.Age)
+	fmt.Println("Parent Name from Child:", child1.Parent.Name)
+	fmt.Println("Child Title:", child1.title())
 }
