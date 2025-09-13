@@ -6,6 +6,23 @@ import (
 	"strings"
 )
 
+func cleanup() {
+	fmt.Println("Cleanup...")
+}
+
+func configCheck(name string) {
+	defer cleanup()
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered from error:", r)
+		}
+	}()
+	if name == "" {
+		panic("Name cannot be empty")
+	}
+	fmt.Println("Config name:", name)
+}
+
 func test() {
 	fmt.Println("Test function")
 }
@@ -258,4 +275,10 @@ func main()  {
 
 	total := addNumbers(10, 20, 30, 40, 50)
 	fmt.Printf("Total: %d\n", total)
+
+	// defer, panic, & recover
+	configCheck("MyApp")
+	fmt.Println("Program selesai")
+	configCheck("")
+	fmt.Println("Program selesai")
 }
