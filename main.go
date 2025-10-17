@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"time"
 )
 
 func cleanup() {
@@ -64,6 +65,15 @@ type Child struct {
 
 func (c Child) title() string {
 	return c.Name + " son of " + c.Parent.Name
+}
+
+func convertToZone(t time.Time, zone string) time.Time {
+	loc, err := time.LoadLocation(zone)
+	if err != nil {
+		fmt.Println("Error loading location:", err)
+		return t
+	}
+	return t.In(loc)
 }
 
 func main()  {
@@ -320,4 +330,17 @@ func main()  {
 
 	*p = 20
 	fmt.Println("New value of x:", x)
+
+	// time & timezone
+	now := time.Now()
+	fmt.Println("Current Time:", now)
+
+	jakartaTime := convertToZone(now, "Asia/Jakarta")
+	fmt.Println("Jakarta Time:", jakartaTime)
+
+	newYorkTime := convertToZone(now, "America/New_York")
+	fmt.Println("New York Time:", newYorkTime)
+
+	marsTime := convertToZone(now, "Mars/Phobos")
+	fmt.Println("Mars Time (fallback to UTC):", marsTime)
 }
