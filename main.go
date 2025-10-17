@@ -310,4 +310,14 @@ func main()  {
 	fmt.Println("Child Age:", child1.Age)
 	fmt.Println("Parent Name from Child:", child1.Parent.Name)
 	fmt.Println("Child Title:", child1.title())
+
+	// pointer
+	var x int = 10
+	var p *int = &x
+	fmt.Println("Value of x:", x)
+	fmt.Println("Address of x:", p)
+	fmt.Println("Value at address p:", *p)
+
+	*p = 20
+	fmt.Println("New value of x:", x)
 }
